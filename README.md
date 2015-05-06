@@ -34,10 +34,10 @@ Starting from this, LSUPG uses a `"file + memory"` model in order to handle larg
 ### Is It Only For Numerical Sequence
 In fact, when i first build up this tool, it works for numerical sequence only. But i extend it for general type. The only requirement for the user is to overload the `toString()` method, because we will use the String object for comparison.
 
-But remember, `DONT` use , and other symbols which can be not be used in file/folder name in return value of the `toString()` method .
+But remember, `DONT` use <u>,</u> and other symbols which can be not be used in file/folder name in return value of the `toString()` method .
 
 ### What Can I Use It For
-Well...I don't know, maybe generating a digest for many articles or a index for data set, all depends on you.
+Well...I don't know, maybe generating digests for many articles or indexes for data set, all depends on you.
 
 ### API Usage
 Very simple. Suppose you have a self-defined Class MyType and its toString() has been overridden.
@@ -46,6 +46,7 @@ Map<Integer, List<MyType>> inputMap = getInputMap();
 ListShortestUniquePrefixGenerator<MyType> generator = new ListShortestUniquePrefixGenerator<MyType>();
 Map<Integer, List<MyType>> outputMap = generator.generate(inputMap);
 ```
+See sample [MyType.java](src/com/sample/MyType.java)
 
 ### Configuration
 You can revise these in `config.properties`.  
@@ -56,7 +57,6 @@ You can revise these in `config.properties`.
 
 ### Required Lib
 log4j-1.2.14.jar  
-commons-lang3-3.4.jar  
 
 ### I Find A Bug || I Have Good Idea For This Tool
 Tell me by sending email to sc1_1#163.com, you are appreciated.
